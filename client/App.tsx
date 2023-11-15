@@ -32,7 +32,7 @@ export default function App() {
       <StatusBar style="auto" />
       <Text style={styles.heading}>The Greeter dApp</Text>
       <Text>{isConnected ? address : "Status: Not Connected"}</Text>
-      <Pressable onPress={handleButtonPress} style={styles.pressableMargin}>
+      <Pressable onPress={handleButtonPress} style={styles.pressableButton}>
         <Text>{isConnected ? "Disconnect" : "Connect"}</Text>
       </Pressable>
       <WalletConnectModal projectId={projectId} providerMetadata={metadata} />
@@ -52,7 +52,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 16,
   },
-  pressableMargin: {
+  pressableButton: {
+    borderWidth: 1,
+    borderColor: "black",
+    padding: 8,
     marginTop: 16,
   },
 });
