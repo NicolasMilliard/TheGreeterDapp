@@ -1,4 +1,4 @@
-import { useMemo, useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 import { PROJECT_ID } from "@env";
 import { StyleSheet, SafeAreaView, Text } from "react-native";
 import { registerRootComponent } from "expo";
@@ -7,12 +7,12 @@ import { WalletConnectModal, useWalletConnectModal } from "@walletconnect/modal-
 
 import MainTitle from "./src/components/Titles/MainTitle/MainTitle";
 import PrimaryButton from "./src/components/Buttons/PrimaryButton/PrimaryButton";
+import RequestModal from "./src/components/Modals/RequestModal";
 
 // TESTS
 import { createPublicClient, createWalletClient, custom, type PublicClient, type WalletClient } from "viem";
 import { goerli } from "viem/chains";
 import ContractUtils from "./utils/ContractUtils";
-import { RequestModal } from "./components/RequestModal";
 
 export default function App() {
   const projectId = PROJECT_ID;
