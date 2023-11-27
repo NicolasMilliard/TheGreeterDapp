@@ -17,6 +17,9 @@ web-build/
 # Metro
 .metro-health-check*
 
+# Smart contracts
+artifacts/
+
 # debug
 npm-debug.*
 yarn-debug.*
