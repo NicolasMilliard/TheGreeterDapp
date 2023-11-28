@@ -9,9 +9,9 @@ const Disconnected = ({ isConnected }: WalletConnexionProps) => {
 
   const handleButtonPress = async () => {
     if (isConnected) {
-      return provider?.disconnect();
+      provider?.disconnect();
     }
-    return open();
+    open();
   };
 
   return (
